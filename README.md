@@ -192,7 +192,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 Para dúvidas, sugestões ou colaborações:
 
-- Email: contato@likelooksolutions.com
+- Email: juliocamposmachado@gmail.com
 - Website: [Like Look Solutions](https://likelooksolutions.com)
 
 ## 🙏 Agradecimentos
@@ -207,7 +207,7 @@ Para dúvidas, sugestões ou colaborações:
 <div align="center">
   <p>Feito com ❤️ e ☀️ por <strong>Like Look Solutions</strong></p>
   <p>
-    <a href="https://astridnielsen-lab.github.io/Solar-Flares/">🌐 Ver Site</a> •
+    <a href="https://solar-flares.vercel.app">🌐 Ver Site</a> •
     <a href="https://github.com/AstridNielsen-lab/Solar-Flares/issues">🐛 Reportar Bug</a> •
     <a href="https://github.com/AstridNielsen-lab/Solar-Flares/discussions">💬 Discussões</a>
   </p>
