@@ -23,13 +23,13 @@ function App() {
     <div className="min-h-screen bg-slate-900">
       <Header />
       <Hero />
+      <MagneticFieldSection />
       <PhysicsSection />
       <SimulationsSection />
       <RealTimeDataSection />
       <EffectsSection />
       <HistorySection />
       <FutureSection />
-      <MagneticFieldSection />
       <Footer />
     </div>
   );
