@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import PhysicsSection from './components/PhysicsSection';
 import SimulationsSection from './components/SimulationsSection';
+import RealTimeDataSection from './components/RealTimeDataSection';
 import EffectsSection from './components/EffectsSection';
 import HistorySection from './components/HistorySection';
 import FutureSection from './components/FutureSection';
@@ -23,6 +24,7 @@ function App() {
       <Hero />
       <PhysicsSection />
       <SimulationsSection />
+      <RealTimeDataSection />
       <EffectsSection />
       <HistorySection />
       <FutureSection />

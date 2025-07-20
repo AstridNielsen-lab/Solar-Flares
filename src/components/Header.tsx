@@ -8,6 +8,7 @@ const Header = () => {
     { href: '#home', label: 'Início' },
     { href: '#physics', label: 'Física' },
     { href: '#simulations', label: 'Simulações' },
+    { href: '#realtime-data', label: 'Dados Reais' },
     { href: '#effects', label: 'Efeitos' },
     { href: '#history', label: 'História' },
     { href: '#future', label: 'Futuro' },
