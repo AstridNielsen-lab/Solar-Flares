@@ -83,7 +83,7 @@ const MagneticFieldSection: React.FC = () => {
     } catch (error) {
       console.warn('⚠️ Falha nas APIs reais, usando dados simulados:', error);
       // Fallback para dados simulados em caso de erro
-      const data: MagneticNetworkData[] = [
+      const fallbackData: MagneticNetworkData[] = [
         // América do Norte
         { country: 'Estados Unidos', station: 'Boulder', stationCode: 'BOU', fieldStrength: 54.2, declination: 8.2, inclination: 66.7, latitude: 40.137, longitude: -105.238, network: 'USGS/INTERMAGNET', lastUpdate: new Date().toISOString(), status: 'online' },
         { country: 'Estados Unidos', station: 'Honolulu', stationCode: 'HON', fieldStrength: 21.3, declination: 10.5, inclination: 21.8, latitude: 21.316, longitude: -158.099, network: 'USGS/INTERMAGNET', lastUpdate: new Date().toISOString(), status: 'online' },
@@ -169,7 +169,7 @@ const MagneticFieldSection: React.FC = () => {
       ];
       
       // Simular dados em tempo real com pequenas variações
-      const updatedData = data.map(station => ({
+      const updatedData = fallbackData.map(station => ({
         ...station,
         fieldStrength: station.fieldStrength + (Math.random() - 0.5) * 2,
         lastUpdate: new Date(Date.now() - Math.random() * 3600000).toISOString(),
