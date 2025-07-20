@@ -7,7 +7,7 @@
          ✨💫💫      🌌
   ```
   
-  <p><em>Explore os fenômenos mais poderosos do sistema solar através de visualizações interativas</em></p>
+  <p><em>Explore os fenômenos mais poderosos do sistema solar através de visualizações interativas e dados em tempo real</em></p>
   
   ![Solar Flares Visualization](https://img.shields.io/badge/Solar%20Flares-Interactive%20Science-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiIGZpbGw9IiNGRkE1MDAiLz4KPHBhdGggZD0iTTIyIDEySDJNMTIgMlYyMiIgc3Ryb2tlPSIjRkY0NTAwIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+)
   
@@ -33,6 +33,7 @@ Democratizar o conhecimento científico sobre explosões solares, tornando conce
 - 🎮 **Simulações Interativas**: Visualizações 3D utilizando Three.js para demonstrar fenômenos solares
 - 🌍 **Impactos Terrestres**: Como as explosões solares afetam nossa tecnologia e vida cotidiana
 - 📚 **Contexto Histórico**: Eventos históricos importantes relacionados a tempestades solares
+- 🛰️ **Dados em Tempo Real**: Monitoramento ao vivo com APIs da NASA e NOAA
 - 🔮 **Perspectivas Futuras**: Pesquisas atuais e desenvolvimentos na área
 - 📱 **Design Responsivo**: Otimizado para todos os dispositivos
 - 🌙 **Interface Moderna**: Design com gradientes espaciais e animações suaves
@@ -194,7 +195,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 **Julio Campos Machado**
 - Empresa: Like Look Solutions
 - GitHub: [@AstridNielsen-lab](https://github.com/AstridNielsen-lab)
-- LinkedIn: [Julio Campos Machado](https://linkedin.com/in/julio-campos-machado)
+- LinkedIn: [Julio Campos Machado](https://linkedin.com/in/juliocamposmachado)
 
 ## 📧 Contato
 
