@@ -1,8 +1,24 @@
 {
-  "name": "vite-react-typescript-starter",
-  "private": true,
-  "version": "0.0.0",
+  "name": "solar-flares",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
+  "description": "Site educacional interativo sobre explosões solares, física, impactos terrestres e implicações tecnológicas",
+  "keywords": ["explosões solares", "física solar", "astronomia", "educação", "react", "typescript", "three.js"],
+  "author": {
+    "name": "Julio Campos Machado",
+    "email": "contato@likelooksolutions.com",
+    "url": "https://github.com/AstridNielsen-lab"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AstridNielsen-lab/Solar-Flares.git"
+  },
+  "homepage": "https://astridnielsen-lab.github.io/Solar-Flares/",
+  "bugs": {
+    "url": "https://github.com/AstridNielsen-lab/Solar-Flares/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
