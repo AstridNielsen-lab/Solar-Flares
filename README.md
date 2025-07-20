@@ -1,8 +1,7 @@
 # 🌟 Explosões Solares - Solar Flares
 
 <div align="center">
-  <img src="public/solar-flares-og.svg" alt="Solar Flares Banner" width="600" height="315">
-  
+    
   [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live_Demo-blue?style=for-the-badge&logo=github)](https://astridnielsen-lab.github.io/Solar-Flares/)
   [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
