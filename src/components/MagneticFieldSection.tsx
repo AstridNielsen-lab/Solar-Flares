@@ -56,8 +56,33 @@ const MagneticFieldSection: React.FC = () => {
   const fetchMagneticNetworkData = async () => {
     try {
       setLoading(true);
-      // Dados reais de estações de monitoramento magnético globais
-      // Baseado em redes como INTERMAGNET, CARISMA, SuperMAG, etc.
+      
+      // Buscar dados reais das APIs de monitoramento magnético
+      const { fetchGlobalMagneticNetworkData } = await import('../utils/spaceWeatherAPI');
+      
+      const realStationData = await fetchGlobalMagneticNetworkData();
+      
+      // Converter para o formato esperado pelo componente
+      const data: MagneticNetworkData[] = realStationData.map(station => ({
+        country: station.country,
+        station: station.stationName,
+        stationCode: station.stationCode,
+        fieldStrength: station.fieldStrength,
+        declination: station.declination,
+        inclination: station.inclination,
+        latitude: station.latitude,
+        longitude: station.longitude,
+        network: station.network,
+        lastUpdate: station.lastUpdate,
+        status: station.status
+      }));
+      
+      setNetworkData(data);
+      console.log(`✅ Rede magnética global carregada: ${data.length} estações`);
+      
+    } catch (error) {
+      console.warn('⚠️ Falha nas APIs reais, usando dados simulados:', error);
+      // Fallback para dados simulados em caso de erro
       const data: MagneticNetworkData[] = [
         // América do Norte
         { country: 'Estados Unidos', station: 'Boulder', stationCode: 'BOU', fieldStrength: 54.2, declination: 8.2, inclination: 66.7, latitude: 40.137, longitude: -105.238, network: 'USGS/INTERMAGNET', lastUpdate: new Date().toISOString(), status: 'online' },
