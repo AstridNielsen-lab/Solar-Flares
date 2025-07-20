@@ -1,7 +1,15 @@
-# 🌟 Explosões Solares - Solar Flares
-
 <div align="center">
-  <img src="public/solar-flares-og.svg" alt="Solar Flares Banner" width="600" height="315">
+  <h1>🌟 Explosões Solares - Solar Flares</h1>
+  
+  ```
+  🌌      ✨💫        🌍
+     ☀️ ⟶⟶⟶🔥🔥🔥⟶⟶⟶ 📡
+         ✨💫💫      🌌
+  ```
+  
+  <p><em>Explore os fenômenos mais poderosos do sistema solar através de visualizações interativas</em></p>
+  
+  ![Solar Flares Visualization](https://img.shields.io/badge/Solar%20Flares-Interactive%20Science-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiIGZpbGw9IiNGRkE1MDAiLz4KPHBhdGggZD0iTTIyIDEySDJNMTIgMlYyMiIgc3Ryb2tlPSIjRkY0NTAwIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+)
   
   [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live_Demo-blue?style=for-the-badge&logo=github)](https://astridnielsen-lab.github.io/Solar-Flares/)
   [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
