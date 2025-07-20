@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Explosões Solares - Física e Impactos Terrestres",
+  "alternateName": "Solar Flares - Like Look Solutions",
+  "url": "https://astridnielsen-lab.github.io/Solar-Flares/",
+  "description": "Site educacional completo sobre explosões solares, sua física, impactos terrestres e implicações tecnológicas. Explore simulações, história e futuro da pesquisa solar.",
+  "keywords": "explosões solares, física solar, tempestades magnéticas, clima espacial, aurora boreal, GPS, satélites, astronomia, astrofísica",
+  "inLanguage": "pt-BR",
+  "author": {
+    "@type": "Person",
+    "name": "Julio Campos Machado",
+    "jobTitle": "Desenvolvedor",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Like Look Solutions"
+    }
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Like Look Solutions",
+    "url": "https://github.com/AstridNielsen-lab"
+  },
+  "dateCreated": "2025-07-20",
+  "dateModified": "2025-07-20",
+  "genre": ["Educação", "Ciência", "Astronomia", "Física"],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Estudantes, educadores, entusiastas da astronomia"
+  },
+  "mainEntity": {
+    "@type": "Thing",
+    "name": "Explosões Solares",
+    "description": "Fenômenos solares de alta energia que afetam o clima espacial e a tecnologia terrestre",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Solar_flare",
+      "https://www.nasa.gov/mission_pages/sunearth/spaceweather/"
+    ]
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://astridnielsen-lab.github.io/Solar-Flares/#{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
