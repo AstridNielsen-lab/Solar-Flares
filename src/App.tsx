@@ -10,6 +10,7 @@ import EffectsSection from './components/EffectsSection';
 import HistorySection from './components/HistorySection';
 import FutureSection from './components/FutureSection';
 import Footer from './components/Footer';
+import MagneticFieldSection from './components/MagneticFieldSection';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -28,6 +29,7 @@ function App() {
       <EffectsSection />
       <HistorySection />
       <FutureSection />
+      <MagneticFieldSection />
       <Footer />
     </div>
   );
