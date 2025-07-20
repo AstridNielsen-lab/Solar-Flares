@@ -186,7 +186,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 **Julio Campos Machado**
 - Empresa: Like Look Solutions
 - GitHub: [@AstridNielsen-lab](https://github.com/AstridNielsen-lab)
-- LinkedIn: [Julio Campos Machado](https://linkedin.com/in/julio-campos-machado)
+- LinkedIn: [Julio Campos Machado](https://linkedin.com/in/juliocamposmachado)
 
 ## 📧 Contato
 
