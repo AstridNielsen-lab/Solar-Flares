@@ -6,6 +6,7 @@ const Header = () => {
 
   const navItems = [
     { href: '#home', label: 'Início' },
+    { href: '#data-analysis', label: 'Análise de Dados' },
     { href: '#physics', label: 'Física' },
     { href: '#simulations', label: 'Simulações' },
     { href: '#realtime-data', label: 'Dados Reais' },

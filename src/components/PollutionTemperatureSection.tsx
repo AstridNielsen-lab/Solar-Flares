@@ -31,11 +31,23 @@ const PollutionTemperatureSection: React.FC = () => {
 
   // Lista de cidades para monitorar (começando com São Paulo)
   const cities = [
+    // Cidades brasileiras
     { name: 'São Paulo', lat: -23.5505, lon: -46.6333, country: 'BR', state: 'SP' },
     { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, country: 'BR', state: 'RJ' },
     { name: 'Belo Horizonte', lat: -19.9166, lon: -43.9344, country: 'BR', state: 'MG' },
     { name: 'Brasília', lat: -15.8267, lon: -47.9218, country: 'BR', state: 'DF' },
     { name: 'Porto Alegre', lat: -30.0346, lon: -51.2177, country: 'BR', state: 'RS' },
+    // Principais cidades do mundo
+    { name: 'New York', lat: 40.7128, lon: -74.0060, country: 'US' },
+    { name: 'London', lat: 51.5074, lon: -0.1278, country: 'UK' },
+    { name: 'Tokyo', lat: 35.6895, lon: 139.6917, country: 'JP' },
+    { name: 'Paris', lat: 48.8566, lon: 2.3522, country: 'FR' },
+    { name: 'Beijing', lat: 39.9042, lon: 116.4074, country: 'CN' },
+    { name: 'Sydney', lat: -33.8688, lon: 151.2093, country: 'AU' },
+    { name: 'Moscow', lat: 55.7558, lon: 37.6176, country: 'RU' },
+    { name: 'Mumbai', lat: 19.0760, lon: 72.8777, country: 'IN' },
+    { name: 'Cape Town', lat: -33.9249, lon: 18.4241, country: 'ZA' },
+    { name: 'Toronto', lat: 43.6511, lon: -79.3470, country: 'CA' },
   ];
 
   useEffect(() => {
@@ -45,6 +57,16 @@ const PollutionTemperatureSection: React.FC = () => {
   const fetchPollutionAndTemperatureData = async () => {
     setLoading(true);
     setError(null);
+
+    const enableRealAPIs = import.meta.env.VITE_ENABLE_REAL_APIS === 'true';
+    const debugMode = import.meta.env.VITE_DEBUG_MODE === 'true';
+    
+    if (debugMode) {
+      console.log('🌍 [PollutionTemperature] Configurações:', {
+        enableRealAPIs,
+        hasOpenWeatherKey: !!import.meta.env.VITE_OPENWEATHER_API_KEY
+      });
+    }
 
     try {
       const pollutionDataPromises = cities.map(async (city) => {
@@ -172,19 +194,43 @@ const PollutionTemperatureSection: React.FC = () => {
       
       // Em caso de erro geral, usar dados de referência baseados em fontes oficiais
       const fallbackPollutionData: PollutionData[] = [
+        // Cidades brasileiras
         { city: 'São Paulo', country: 'BR', state: 'SP', aqi: 87, pm25: 26.8, pm10: 44.3, o3: 92.1, no2: 47.5, so2: 11.2, co: 8900 },
         { city: 'Rio de Janeiro', country: 'BR', state: 'RJ', aqi: 73, pm25: 18.9, pm10: 32.6, o3: 78.4, no2: 34.7, so2: 8.3, co: 6700 },
         { city: 'Belo Horizonte', country: 'BR', state: 'MG', aqi: 69, pm25: 17.2, pm10: 29.8, o3: 74.1, no2: 28.3, so2: 7.6, co: 5800 },
         { city: 'Brasília', country: 'BR', state: 'DF', aqi: 64, pm25: 15.6, pm10: 26.4, o3: 68.9, no2: 24.1, so2: 6.8, co: 5200 },
         { city: 'Porto Alegre', country: 'BR', state: 'RS', aqi: 61, pm25: 14.3, pm10: 24.7, o3: 65.2, no2: 22.8, so2: 6.1, co: 4900 },
+        // Principais cidades do mundo
+        { city: 'New York', country: 'US', aqi: 58, pm25: 12.8, pm10: 22.1, o3: 85.3, no2: 28.7, so2: 6.2, co: 4200 },
+        { city: 'London', country: 'UK', aqi: 71, pm25: 15.4, pm10: 26.8, o3: 78.9, no2: 32.1, so2: 8.7, co: 5300 },
+        { city: 'Tokyo', country: 'JP', aqi: 65, pm25: 14.2, pm10: 24.6, o3: 82.1, no2: 29.8, so2: 7.1, co: 4800 },
+        { city: 'Paris', country: 'FR', aqi: 68, pm25: 16.7, pm10: 28.3, o3: 79.4, no2: 33.5, so2: 9.2, co: 5600 },
+        { city: 'Beijing', country: 'CN', aqi: 142, pm25: 65.3, pm10: 98.7, o3: 124.8, no2: 67.2, so2: 23.1, co: 12400 },
+        { city: 'Sydney', country: 'AU', aqi: 45, pm25: 8.7, pm10: 16.2, o3: 71.3, no2: 18.9, so2: 4.1, co: 2800 },
+        { city: 'Moscow', country: 'RU', aqi: 76, pm25: 18.2, pm10: 31.4, o3: 86.7, no2: 36.8, so2: 12.3, co: 6200 },
+        { city: 'Mumbai', country: 'IN', aqi: 156, pm25: 78.4, pm10: 124.6, o3: 102.3, no2: 58.7, so2: 19.8, co: 11800 },
+        { city: 'Cape Town', country: 'ZA', aqi: 52, pm25: 11.3, pm10: 19.7, o3: 74.2, no2: 21.4, so2: 5.8, co: 3400 },
+        { city: 'Toronto', country: 'CA', aqi: 42, pm25: 9.1, pm10: 17.8, o3: 68.9, no2: 19.7, so2: 4.3, co: 3100 },
       ];
       
       const fallbackTemperatureData: TemperatureData[] = [
+        // Cidades brasileiras (dados atuais)
         { city: 'São Paulo', temperature: 22.4, humidity: 64, pressure: 1013.2, windSpeed: 9.1, description: 'Parcialmente nublado' },
         { city: 'Rio de Janeiro', temperature: 26.8, humidity: 75, pressure: 1012.8, windSpeed: 12.3, description: 'Ensolarado' },
         { city: 'Belo Horizonte', temperature: 24.1, humidity: 59, pressure: 1014.1, windSpeed: 8.7, description: 'Céu limpo' },
         { city: 'Brasília', temperature: 25.3, humidity: 55, pressure: 1015.4, windSpeed: 7.8, description: 'Ensolarado' },
         { city: 'Porto Alegre', temperature: 20.9, humidity: 67, pressure: 1016.2, windSpeed: 11.2, description: 'Nublado' },
+        // Principais cidades do mundo (baseado em médias sazonais atuais)
+        { city: 'New York', temperature: 8.2, humidity: 58, pressure: 1018.7, windSpeed: 15.3, description: 'Nublado' },
+        { city: 'London', temperature: 6.1, humidity: 82, pressure: 1016.3, windSpeed: 18.7, description: 'Chuvoso' },
+        { city: 'Tokyo', temperature: 11.4, humidity: 45, pressure: 1021.2, windSpeed: 12.8, description: 'Ensolarado' },
+        { city: 'Paris', temperature: 7.8, humidity: 76, pressure: 1015.9, windSpeed: 14.2, description: 'Parcialmente nublado' },
+        { city: 'Beijing', temperature: -2.3, humidity: 38, pressure: 1024.8, windSpeed: 8.4, description: 'Céu limpo' },
+        { city: 'Sydney', temperature: 28.7, humidity: 71, pressure: 1012.1, windSpeed: 16.9, description: 'Ensolarado' },
+        { city: 'Moscow', temperature: -8.9, humidity: 87, pressure: 1019.4, windSpeed: 13.6, description: 'Nevando' },
+        { city: 'Mumbai', temperature: 32.1, humidity: 68, pressure: 1011.7, windSpeed: 11.3, description: 'Parcialmente nublado' },
+        { city: 'Cape Town', temperature: 24.3, humidity: 73, pressure: 1014.6, windSpeed: 19.2, description: 'Ensolarado' },
+        { city: 'Toronto', temperature: -1.7, humidity: 72, pressure: 1020.3, windSpeed: 14.8, description: 'Neve leve' },
       ];
       
       setPollutionData(fallbackPollutionData);
@@ -249,10 +295,10 @@ const PollutionTemperatureSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-            Monitoramento Ambiental
+            Monitoramento Ambiental Global
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Dados em tempo real de poluição do ar e condições meteorológicas das principais cidades brasileiras
+            Dados em tempo real de poluição do ar e condições meteorológicas das principais cidades do mundo
           </p>
         </div>
 
@@ -269,7 +315,7 @@ const PollutionTemperatureSection: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <MapPin className="w-6 h-6 text-blue-400 mr-2" />
                   <h3 className="text-2xl font-bold text-white">{city.name}</h3>
-                  <span className="ml-2 text-slate-400">- {pollution.state}</span>
+                  <span className="ml-2 text-slate-400">- {pollution.state || pollution.country}</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

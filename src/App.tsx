@@ -12,6 +12,7 @@ import FutureSection from './components/FutureSection';
 import Footer from './components/Footer';
 import MagneticFieldSection from './components/MagneticFieldSection';
 import PollutionTemperatureSection from './components/PollutionTemperatureSection';
+import DataAnalysisSection from './components/DataAnalysisSection';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -24,6 +25,7 @@ function App() {
     <div className="min-h-screen bg-slate-900">
       <Header />
       <Hero />
+      <DataAnalysisSection />
       <PollutionTemperatureSection />
       <MagneticFieldSection />
       <PhysicsSection />
