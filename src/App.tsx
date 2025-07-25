@@ -1,18 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SplashScreen from './components/SplashScreen';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import PhysicsSection from './components/PhysicsSection';
-import SimulationsSection from './components/SimulationsSection';
-import RealTimeDataSection from './components/RealTimeDataSection';
-import EffectsSection from './components/EffectsSection';
-import HistorySection from './components/HistorySection';
-import FutureSection from './components/FutureSection';
 import Footer from './components/Footer';
-import MagneticFieldSection from './components/MagneticFieldSection';
-import PollutionTemperatureSection from './components/PollutionTemperatureSection';
-import DataAnalysisSection from './components/DataAnalysisSection';
+import HomePage from './pages/HomePage';
+import DataAnalysisPage from './pages/DataAnalysisPage';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -22,20 +15,20 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900">
-      <Header />
-      <Hero />
-      <DataAnalysisSection />
-      <PollutionTemperatureSection />
-      <MagneticFieldSection />
-      <PhysicsSection />
-      <SimulationsSection />
-      <RealTimeDataSection />
-      <EffectsSection />
-      <HistorySection />
-      <FutureSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-slate-900">
+        <Routes>
+          <Route path="/analise-dados" element={<DataAnalysisPage />} />
+          <Route path="/" element={
+            <>
+              <Header />
+              <HomePage />
+              <Footer />
+            </>
+          } />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
