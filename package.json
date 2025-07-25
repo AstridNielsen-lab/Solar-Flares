@@ -4,7 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Site educacional interativo sobre explosões solares, física, impactos terrestres e implicações tecnológicas",
-  "keywords": ["explosões solares", "física solar", "astronomia", "educação", "react", "typescript", "three.js"],
+  "keywords": [
+    "explosões solares",
+    "física solar",
+    "astronomia",
+    "educação",
+    "react",
+    "typescript",
+    "three.js"
+  ],
   "author": {
     "name": "Julio Campos Machado",
     "email": "contato@likelooksolutions.com",
